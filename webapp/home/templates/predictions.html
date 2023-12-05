@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="container p-5" style="padding-top: 95px;"></div> >
+{% csrf_token %}
+<form class="form-horizontal" action="/predictions" id="myform" method="POST">
+  {% csrf_token %}
+  <center>
+    {% csrf_token %}
+    <select name="itching" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether itching symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select>
+
+    <select name="skin_rash" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether skin_rash symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select><br>
+    <select name="nodal_skin_eruptions" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether nodal_skin_eruptions symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select>
+    <select name="continuous_sneezing" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether continuous_sneezing symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select><br>
+    <select name="shivering" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether shivering symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select>
+    <select name="chills" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether chills symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select><br>
+    <select name="joint_pain" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether joint_pain symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select>
+    <select name="stomach_pain" style="height: 52.22222px;width: 302.22222px; border-color :color:black; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether stomach_pain symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select><br>
+    <select name="acidity" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether acidity symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+
+    </select>
+    <select name="ulcers_on_tongue" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether ulcers_on_tongue symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+
+    </select><br>
+    <select name="muscle_wasting" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether muscle_wasting symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select>
+    <select name="vomiting" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether vomiting symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select> <br>
+    <select name="burning_micturition" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether burning_micturition symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select>
+    <select name="spotting_urination" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether spotting_urination symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+
+    </select><br>
+    <select name="fatigue" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether fatigue symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select>
+    <select name="weight_gain" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether weight_gain symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select><br>
+    <select name="anxiety" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether anxiety symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select>
+    <select name="cold_hands_and_feets" style="height: 52.22222px;width: 302.22222px; border-color :color:white; ">
+      <option style="color:rgb(17, 1, 1);" value=" ">Choose whether cold_hands_and_feets symptoms is there </option>
+      <option style="color:rgb(20, 1, 1);" value="0">NO</option>
+      <option style="color:rgb(15, 0, 0);" value="1">YES</option>
+    </select><br><br>
+    <input class="white_bt bt_main" type="submit" value="Submit" style="margin-left: 0px;margin-top: 33px;">
+    </div>
+  </center>
+
+</form>
+{% if res %}
+<div class="alert alert-success mb-5">
+  <strong>
+    The symptom based prediction: {{res}}
+  </strong>
+</div>
+{% endif %}
+</div>
+
+{% endblock %}
